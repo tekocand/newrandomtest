@@ -1,0 +1,21 @@
+nner motd ^C ########### This is an automated banner ########### ^C
+parser view restricted
+ secret 5 $1$hRMr$HrJpiOL5KkaQ3Ks4kORRM/
+ commands exec exclude configure
+ commands exec include terminal width
+ commands exec include terminal length
+ commands exec include terminal
+ commands exec include all show ip
+ commands exec include show version
+ commands exec include show
+ commands exec include logout
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ transport input telnet ssh
+!
+!
+end
